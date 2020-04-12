@@ -1,0 +1,25 @@
+{
+  "name": "30",
+  "version": "5.1.0",
+  "version_updated": "Released 9th of April, 2020 - to help at-home workers.",
+  "manifest_version": 2,
+  "description": "Take control of your day.",
+  "browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "30 Thirty",
+		"default_popup": "extension.html"
+	},
+  "background": {
+    "scripts": [
+      "src/alarm.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "storage", "tts", "notifications", "alarms"
+  ],
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; script-src 'self' https://www.google.com; script-src 'self' https://code.jquery.com/jquery-3.4.1.min.js; object-src 'self'",
+  "icons": {
+    "128": "icon.png"
+  }
+}

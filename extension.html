@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans|Source+Code+Pro|Roboto' rel='stylesheet' type='text/css'>
+		<link href='src/mainer.css' rel='stylesheet' type='text/css'>
+		<link href='src/jquery-ui.min.css' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<base target="_blank">
+		<link href="src/animate.css" type="text/css" rel="stylesheet" />
+
+		<!-- Primary Meta Tags -->
+		<title>Lineup — tighten your grip on your tasks</title>
+		<meta name="title" content="Lineup — tighten your grip on your tasks">
+		<meta name="description" content="With Lineup, you're able to easily visualize your daily tasks and to-come dreams, creating a smart home for your future. Nothing will be unaccomplished.">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://chrome.google.com/webstore/detail/day-lineup-track-days-enh/mgdbbpcmdncgfokcdlpfokmlipdcnoen">
+		<meta property="og:title" content="Lineup — tighten your grip on your tasks">
+		<meta property="og:description" content="With Lineup, you're able to easily visualize your daily tasks and to-come dreams, creating a smart home for your future. Nothing will be unaccomplished.">
+		<meta property="og:image" content="https://i.imgur.com/14ueHo9.jpg">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://chrome.google.com/webstore/detail/day-lineup-track-days-enh/mgdbbpcmdncgfokcdlpfokmlipdcnoen">
+		<meta property="twitter:title" content="Lineup — tighten your grip on your tasks">
+		<meta property="twitter:description" content="With Lineup, you're able to easily visualize your daily tasks and to-come dreams, creating a smart home for your future. Nothing will be unaccomplished.">
+		<meta property="twitter:image" content="https://i.imgur.com/14ueHo9.jpg">
+
+	</head>
+	<body bgcolor="#FFF" style="position: relative;">
+
+		<div style="position: absolute; z-index: 0; font-size: 2rem; color: rgba(12, 12, 12, 0.1); pointer-events: none; width: 100%; text-align: center; top: 37.9vh;">
+			Where does time go? <br/>
+			<small>Below is your time still able to be utilized</small>
+		</div>
+
+		<div class="modal" style="z-index: -1; opacity: 0;">
+			<div class="close">x</div>
+			<div class="content">
+				<div class="box">
+					<input id="event" type="text" class="big" placeholder="EVENT NAME" />
+					<p style="margin-bottom: 0;" title="Click to insert...">For example...</p>
+					<button data-to="#event" class="mini-select" style="margin-top: 10px;">Reading</button>
+					<button data-to="#event" class="mini-select" style="margin-top: 10px;">Work</button>
+					<button data-to="#event" class="mini-select" style="margin-top: 10px;">School</button>
+					<button data-to="#event" class="mini-select" style="margin-top: 10px;">WORKOUT</button>
+					<button data-to="#event" class="mini-select" style="margin-top: 10px;">Pre-sleep Relaxation</button>
+					<button data-to="#event" class="mini-select" style="margin-top: 10px;">Lunch</button>
+				</div>
+				<div class="box">
+					<p>If you provide a description, part of it will be displayed when you get notified.</p>
+					<textarea id="description" placeholder="Give a little description... "></textarea>
+					<div style="float: left;">
+						<h1 style="font-family: 'Source Code Pro', Arial;" title="Dadadada...">Event time: <span id="event-time" style="font-family: 'Source Code Pro', Arial;">6:00am</span></h1>
+					</div>
+					<button class="mini save" style="margin-top: 10px; float: right;">
+						Set
+					</button>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="container">
+			<div class="grid">
+
+
+
+				<div class="half-hour dark">
+					<div class="time">
+						12:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						12:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						1:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						1:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						2:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						2:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						3:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						3:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						4:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						4:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						5:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">
+						5:30am
+					</div>
+					<h2></h2>
+				</div>
+
+
+				<div class="half-hour">
+					<div class="time">6:00am ☀️</div>
+					<h2>This is a great time to be alive</h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">6:30am</div>
+					<h2>Heals</h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						7:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						7:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						8:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						8:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						9:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						9:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						10:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						10:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						11:00am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						11:30am
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						12:00pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						12:30pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						1:00pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						1:30pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						2:00pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						2:30pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						3:00pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						3:30pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						4:00pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						4:30pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						5:00pm
+					</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour">
+					<div class="time">
+						5:30pm
+					</div>
+					<h2></h2>
+				</div>
+
+
+				<div class="half-hour dark">
+					<div class="time">6:00pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">6:30pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">7:00pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">7:30pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">8:00pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">8:30pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">9:00pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">9:30pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">10:00pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">10:30pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">11:00pm</div>
+					<h2></h2>
+				</div>
+				<div class="half-hour dark">
+					<div class="time">11:30pm</div>
+					<h2></h2>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="src/jquery.min.js"></script>
+	<script src="src/jquery-ui.min.js"></script>
+	<script src="src/main.js"></script>
+	<script src="src/extra-js/expired.js"></script>
+</html>

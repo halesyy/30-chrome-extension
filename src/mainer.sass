@@ -1,0 +1,202 @@
+// $prim: lighten(#03CEA4, 5%)
+$success: #62E163
+$error: #FC8D8C
+$cute: #54C4FA
+$prim: #C89CFF
+// $prim: linear-gradient(to bottom right, cyan, magenta)
+$primSeethrough: #ff6675E6
+$prim: #1cff6f
+$prim: #0ac74f
+// $prim: $success
+// $prim: blue
+$backgroundText: #0000004f
+$backgroundTextLight: rgba(0, 0, 0, 0.6)
+$backgroundTextDark: #ffffff4f
+// $prim: #5fc635
+
+body, html
+  // background: darken(whitesmoke, 5%)
+  // background: linear-gradient(243deg, rgba(191,239,205,1) 29%, rgba(247,236,173,1) 100%)
+  background: #014a6d
+  background: whitesmoke
+  background: linear-gradient(336deg, rgba(226,233,74,1) 2%, rgba(196,255,129,0.758140756302521) 47%, rgba(255,253,121,1) 100%)
+  width: 800px
+  height: 569px
+  padding: 0
+  margin: 0
+
+body
+  overflow-y: hidden
+
+div, *
+  font-family: "Ubuntu", Arial
+
+.shadow
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12)
+
+.shadow-deep
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+
+.grid
+  height: 100vh
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: repeat(24, 1fr)
+  grid-column-gap: 0px
+  grid-row-gap: 0px
+  .half-hour
+    margin: 5px
+    padding: 10px
+    @extend .shadow
+    margin-bottom: 0
+    border-radius: 4px
+
+    // border: solid black 3px
+    // background: $prim
+    // background: linear-gradient(to bottom right, #5fc635, #4aff59)
+
+    background: linear-gradient(to bottom right, lighten($prim, 2%), lighten($prim, 20%))
+    transition: 0.12s
+    height: calc(12.48vh - 27.3px)
+    overflow: hidden !important
+
+    &:nth-child(odd)
+      margin-right: 0
+    &:nth-child(4n + 2)
+      margin-right: 0
+    &:hover
+      h2, .time
+        color: black !important
+      color: black !important
+      // border: solid white 3px
+      cursor: pointer
+      transition: 0.12s
+      background: rgb(12, 12, 12)
+      @extend .shadow-deep
+      // background: $prim
+      // background: #5fc635
+      // background: linear-gradient(to bottom right, #4aff59, #5fc635)
+      background: linear-gradient(to bottom right, lighten($prim, 5%), lighten($prim, 20%))
+      @extend .shadow
+    h2
+      font-size: 1.00rem
+    h2, h3, h4
+      margin: 0
+      font-weight: 400 !important
+      color: $backgroundText
+    .line-height
+      // line-height: calc(8.32vh - 25.3px)
+      line-height: calc(12.48vh - 27.3px)
+      float: left
+    .time
+      // color: darken($prim, 20%)
+      color: $backgroundText
+      font-size: 0.7rem
+      transition: 0.12s
+      &:hover
+        // font-weight: bold
+        color: #0a4e80
+        transition: 0.12s
+        letter-spacing: 0px
+  .dark
+    // border: solid black 1px
+    // background: lighten($primSeethrough, 30%)
+    // background: rgba(84, 84, 84, 0.24)
+    // background: lighten($prim, 11%)
+    // background: #00354f
+    // background: darken($prim, 40%)
+    // color: rgba(84, 84, 84, 0.80)
+    height: calc(4.16vh - 25.3px) !important
+    // padding: 15px
+    padding-top: 0
+    padding-top: 5px
+    padding-bottom: 15px
+
+    .time
+      float: left
+    h2
+      // color: $backgroundTextLight !important
+      float: right
+      margin-top: 1px
+      width: 135px
+      font-size: 0.6rem
+
+
+.modal
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background: rgba(0, 0, 0, 0.9)
+  transition: 0.5s
+  .content
+    .box
+      background: whitesmoke
+      padding: 20px
+      margin: 40px 40px 0 40px
+      @extend .shadow
+      border-radius: 6px
+
+
+input.big, textarea
+  padding: 20px
+  border: 0
+  font-size: 2rem
+  border-radius: 6px
+  text-align: center
+  width: calc(100% - 40px)
+  @extend .shadow
+
+textarea
+  font-size: 1rem
+  text-align: left
+  resize: none
+  height: 100px
+
+.mini-select, .mini
+  padding: 10px 16px 10px 16px
+  border: 0
+  background: $prim
+  color: white
+  border-radius: 6px
+  @extend .shadow
+  cursor: pointer
+  transition: 0.12s
+  &:hover
+    transition: 0.12s
+    background: lighten($prim, 7%)
+
+.close
+  position: absolute
+  top: 20px
+  right: 20px
+  padding: 20px
+  padding-top: 11px
+  cursor: pointer
+  font-weight: bold
+  padding-bottom: 15px
+  border-radius: 200px
+  @extend .shadow
+  border: solid lighten(#c21f1f, 10%) 2px
+  font-family: "Source Code Pro", Arial !important
+  background: #c21f1f
+  font-size: 1.5rem
+  color: white
+  transition: 0.12s
+  &:hover
+    background: lighten(#c21f1f, 10%)
+    transition: 0.12s
+
+.time-over
+  .time, h2
+    color: #12510878 !important
+  background: lighten($prim, 30%) !important
+  opacity: 0.1
+  transition: 0 !important
+  // background: rgba(168, 255, 153, 0.4) !important
+  color: #12510878 !important
+  transition: 0.2s
+  &:hover
+    transition: 0.2s
+    opacity: 0.4
